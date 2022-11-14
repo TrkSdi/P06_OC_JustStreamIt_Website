@@ -1,0 +1,55 @@
+.container {
+    width: 70%;
+    margin: auto;
+    font-family: sans-serif;
+    color: black;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+    .logo_pic {
+        width : 45%;
+        margin-left: 30px;
+    }
+
+    .nav ul li {
+        list-style: none;   
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+        padding-top: 30px;
+
+        .home, .categories {
+            margin-right: 30px;
+            font-size: 1.5em;
+        }
+    }
+}
+
+#movie_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 50px;
+    
+    .section, .best_movie_list {
+        text-align: center;
+    
+    }
+
+    ul {
+        list-style-type: none;
+        
+    }
+}

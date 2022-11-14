@@ -1,0 +1,47 @@
+.container {
+  width: 70%;
+  margin: auto;
+  font-family: sans-serif;
+  color: black;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+#header .logo_pic {
+  width: 45%;
+  margin-left: 30px;
+}
+#header .nav ul li {
+  list-style: none;
+}
+#header .nav__list {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+}
+#header .nav__list .home, #header .nav__list .categories {
+  margin-right: 30px;
+  font-size: 1.5em;
+}
+
+#movie_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding-top: 50px;
+}
+#movie_section .section, #movie_section .best_movie_list {
+  text-align: center;
+}
+#movie_section ul {
+  list-style-type: none;
+}/*# sourceMappingURL=styles.css.map */
