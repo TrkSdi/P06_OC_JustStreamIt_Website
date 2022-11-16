@@ -16,7 +16,7 @@
   width: 45%;
   margin-left: 30px;
 }
-#header .nav ul li {
+#header #header_nav ul li {
   list-style: none;
 }
 #header .nav__list {

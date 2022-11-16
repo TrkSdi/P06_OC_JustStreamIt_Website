@@ -9,12 +9,14 @@
 </head>
 <body>
     <div class="container">
+
+        <!-- EN TETE DU SITE -->
         <head>
             <div id="header">
                 <div class="header__logo">
                     <img src="images/juststreamit_logo.png" alt="JustStreamIt_logo" class="logo_pic">
                 </div>
-                <div class="nav">
+                <div id="header_nav">
                     <nav>
                         <ul class="nav__list">
                             <li class="home">Accueil</li>
@@ -23,25 +25,41 @@
                     </nav>
                 </div>
             </div>
-
         </head>
+
+        <!-- CORPS DU SITE --> 
         <section id="movie_section">
             <div class="section">
+                <!-- MEILLEUR FILM --> 
                 <div id="best_movie">
-                    <h1>Meilleur film</h1>
+                    <h1>MEILLEUR FILM</h1>
+                    <!-- BEST MOVIE MODAL -->
+                    <div id="best_movie_pic"></div>
+                    <!-- BEST MOVIE MODAL CONTENT-->
+                    <div id="best_movie_detail"></div>
                 </div>
-                <div id="sci-fi">
-                    <h1>Catégorie 1</h1>
+                <!-- MEILLEURS FILMS / GENRE-->
+                <div id="best_categorie">
+                    <h1>MEILLEURS FILMS PAR GENRE</h1>
                 </div>
-                <div id="thriller">
-                    <h1>Catégorie 2</h1>
-                </div>
-                <div id="drama">
-                    <h1>Catégorie 3</h1>
-                </div>
+                    <!-- CATEGORIE = SCI FI --> 
+                    <div id="sci-fi">
+                        <h1>SCIENCE FICTION</h1>
+                    </div>
+                    <!-- CATEGORIE = THRILLER -->
+                    <div id="thriller">
+                        <h1>THRILLER</h1>
+                    </div>
+                    <!-- CATEGORIE = DRAMA -->
+                    <div id="drama">
+                        <h1>DRAME</h1>
+                    </div>
             </div>
         </section>
-    </div>   
+    </div>
+    
     <script src="app.js"></script> 
+    <script src="modal.js"></script>
 </body>
 </html>
+
