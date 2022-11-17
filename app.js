@@ -12,34 +12,35 @@ function getBestMovie(url) {
     xhr.onload = function() {
         if (this.readyState == 4 && this.status == 200) {
             const resObj = JSON.parse(this.responseText) // Objet json
-            const bestMoviePic = document.getElementById("best_movie_pic")
-            console.log(resObj.results);
+            const bestMoviePic = document.getElementById("show-modal")
+            const bestMovieContent =  document.getElementById("best_movie_detail")
+            //console.log(resObj.results);
 
             for (element of resObj.results) {
                 console.log(element.image_url);
                 bestMoviePic.innerHTML +=   '<ul>\
-                                                <li><img src="' + element.image_url + '" alt="' + element.title + '" title="' + element.title + '"></li><br>\
-                                            </ul>';
-                                    
-                                    //'<div id="myModal" class="modal"></div>\
-                                    //<div class="modal-content">\
-                                    //    <span class="close"><img src="images/close_btn_mini.png" alt="close_btn"></span>\
-                                    //    <p>\
-                                    //        <ul>\
-                                    //    <li>' + element.title + '</li><br>\
-                                    //    <li>' + element.genres + '</li><br>\
-                                    //    <li>' + element.year + '</li><br>\
-                                    //    <li>' + element.votes + '</li><br>\
-                                    //    <li>' + element.imdb_score + '</li><br>\
-                                    //    <li>' + element.directors + '</li><br>\
-                                    //    <li>' + element.actors + '</li><br>\
-                                    //    <li>' + element.country + '</li><br>\
-                                    //        </ul>\
-                                    //    </p>\
-                                    //</div>';
+                                                    <li><img src="' + element.image_url + '" alt="' + element.title + '" title="' + element.title + '"></li>\
+                                                </ul>';
                 
-                
-                console.log(bestMoviePic.innerHTML)
+                console.log(bestMoviePic.innerHTML);
+
+                bestMovieContent.innerHTML += ' <div id="overlay">\
+                                                  <div id="modal">\
+                                                      <ul>\
+                                                          <li>' + element.title + '</li>\
+                                                          <li>' + element.genres + '</li>\
+                                                          <li>' + element.year + '</li>\
+                                                          <li>' + element.votes + '</li>\
+                                                          <li>' + element.imdb_score + '</li>\
+                                                          <li>' + element.directors + '</li>\
+                                                          <li>' + element.actors + '</li>\
+                                                          <li>' + element.country + '</li>\
+                                                          <button id="close-modal" ><img src="images/close_btn_mini.png" alt="close"></button>\
+                                                    </ul>\
+                                                  </div>\
+                                                </div>';
+
+                //console.log(bestMovieContent.innerHTML)
             }
         } else if (this.status == 404) {
             document.getElementById("best_movie").innerHTML = "Erreur 404";
