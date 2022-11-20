@@ -6,6 +6,12 @@ const sci_fi_url = "http://localhost:8000/api/v1/titles/?genre=Sci-fi&sort_by=-i
 const thriller_url = "http://localhost:8000/api/v1/titles/?genre=thriller&sort_by=-imdb_score&page_size=7"
 const drama_url = "http://localhost:8000/api/v1/titles/?genre=drama&sort_by=-imdb_score&page_size=7"
 
+function openModal(movieId) {
+    // requete movie id 
+    // update information modal
+    // affiche le modal 
+}
+
 
 function getBestMovie(url) {
     // Interroger le serveur et récupérer la réponse 
@@ -19,7 +25,7 @@ function getBestMovie(url) {
             for (element of resObj.results) {
                 console.log(element.image_url);
                 bestMoviePic.innerHTML +=   '<ul>\
-                                                    <li><img src="' + element.image_url + '" alt="' + element.title + '" title="' + element.title + '"></li>\
+                                                    <li><img onclick="openModal('+ element.id +')" src="' + element.image_url + '" alt="' + element.title + '" title="' + element.title + '"></li>\
                                                 </ul>';
                 
                 console.log(bestMoviePic.innerHTML);
@@ -94,7 +100,7 @@ function getBestMovieCategory(url, category) {
 
 
 getBestMovie(best_movie_url);
-//getBestMovieCategory(sci_fi_url, "sci-fi");
+getBestMovieCategory(sci_fi_url, "sci-fi");
 //getBestMovieCategory(thriller_url, "drama");
 //getBestMovieCategory(drama_url, "drama");
     

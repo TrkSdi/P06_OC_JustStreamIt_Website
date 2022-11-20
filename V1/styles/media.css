@@ -1,0 +1,29 @@
+@media screen and (max-width: 390px) {
+    
+    
+
+    .left-section {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .best-movies-sci-fi img, .best-movies-thriller img, .best-movies-drama img {
+        max-width: auto;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .best-movies-sci-fi, .best-movies-thriller, .best-movies-drama {
+        overflow-x: scroll;
+        overscroll-behavior-inline: contain;
+        height: auto;
+    }
+
+    .best-movies-sci-fi img, .best-movies-thriller img, .best-movies-drama img {
+        max-width: 100px;
+    }
+
+}

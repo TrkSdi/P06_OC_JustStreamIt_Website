@@ -1,0 +1,46 @@
+.best-movies-category {
+    background-color: black;
+    margin-top: 30px;
+    z-index: 0;
+}
+
+.category-title {
+    background-color: black;
+    color: white
+}
+
+.category-title h2{
+    margin: 0px;
+    font-size: 15px;
+}
+
+.best-movies-category-pic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    
+}
+
+
+.best-movies-category-pic img {
+    width: 120px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.45s;
+}
+
+.best-movies-category-pic img:hover {
+    transform: scale(1.3);
+    z-index: 1;
+    box-shadow: -1px 1px 5px 2px rgba(255, 255, 255, 0.822);
+}
+ 
+
+.best-movies-thriller, .best-movies-drama {
+    margin-top: 20px;
+
+}

@@ -1,0 +1,40 @@
+header {
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    max-height: 95px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-section {
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.juststreamit-logo {
+    width: 125px;
+}
+
+.right-section {
+    background-color: lightcoral;
+}
+
+.right-section ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    
+}
+
+.right-section ul li {
+    margin-left: 0px;
+    margin-right: 20px;
+    
+}
+
+a {
+    text-decoration: none;
+}
