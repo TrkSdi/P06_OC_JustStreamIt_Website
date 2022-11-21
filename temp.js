@@ -23,12 +23,12 @@ function getBestMovie(url) {
             //console.log(resObj.results);
 
             for (element of resObj.results) {
-                console.log(element.image_url);
+                //console.log(element.image_url);
                 bestMoviePic.innerHTML +=   '<ul>\
                                                     <li><img onclick="openModal('+ element.id +')" src="' + element.image_url + '" alt="' + element.title + '" title="' + element.title + '"></li>\
                                                 </ul>';
                 
-                console.log(bestMoviePic.innerHTML);
+                //console.log(bestMoviePic.innerHTML);
 
                 bestMovieContent.innerHTML += ' <div id="overlay">\
                                                   <div id="modal">\
@@ -46,7 +46,7 @@ function getBestMovie(url) {
                                                   </div>\
                                                 </div>';
 
-                //console.log(bestMovieContent.innerHTML)
+                console.log(bestMovieContent.innerHTML)
             }
         } else if (this.status == 404) {
             document.getElementById("best_movie").innerHTML = "Erreur 404";
