@@ -3,22 +3,15 @@
     .left-section {
         display: none;
     }
-
-}
-
-@media screen and (max-width: 600px) {
-    .best-movies-sci-fi img, .best-movies-thriller img, .best-movies-drama img {
-        max-width: auto;
-    }
 }
 
 @media screen and (max-width: 890px) {
   
-    .best-movies-sci-fi img, .best-movies-thriller img, .best-movies-drama img {
+    .best-movies-category-pictures img {
         max-width: 100px;
     }
 
-    .best-movies-category-pic {
+    .best-movies-category-pictures {
         padding-bottom: 23px;
         padding-top: 23px;
         overflow-x: scroll;

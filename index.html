@@ -7,10 +7,10 @@
     <title>JustStreamIt</title>
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/section.css">
-    <link rel="stylesheet" href="styles/section-category.css">
+    <link rel="stylesheet" href="styles/top-section.css">
+    <link rel="stylesheet" href="styles/mid-section.css">
     <link rel="stylesheet" href="styles/media.css">
-    <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/modal.css"> 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,68 +32,62 @@
             </nav>
         </div>
     </header>
-
+    <!-- END HEADER-->
     <section>
 
-        <div class="best-movie">
-            <div class="main-category-title">
+        <!-- TOP SECTION-->
+        <div class="top-section">
+            <div id="title" class="best-movie-title">
                 <h1>Meilleur film</h1>
             </div>
-            <div id= "best-movie-pic" class="best-movie-image">
-            
-            
+            <div id= "movie-picture" class="best-movie-picture">
+             
+            </div>
         </div>
+        <!-- END TOP SECTION -->
 
-        <div class="best-movies-category">
-            <div class="best-movies-sci-fi">
-                <div class="category-title">
+        <!-- MID SECTION-->
+        <!-- Sci-Fi -->
+        <div class="mid-section"> 
+            <div class="best-movies-category">
+                <div id="category-title" class="category-title">
                     <h2>Meilleurs films Science Ficton</h2>
                 </div>
-                <div class="best-movies-category-pic">
-                    <img src="temp-image/sci-fi-1.jpeg" alt="">
-                    <img src="temp-image/sci-fi-2.jpeg" alt="">
-                    <img src="temp-image/sci-fi-3.jpeg" alt="">
-                    <img src="temp-image/sci-fi-4.jpeg" alt="">
-                    <img src="temp-image/sci-fi-5.jpeg" alt="">
-                    <img src="temp-image/sci-fi-6.jpeg" alt="">
-                    <img src="temp-image/sci-fi-7.jpeg" alt="">
-                </div>
-            </div>
-
-            <div class="best-movies-thriller">
-                <div class="category-title">
-                    <h2>Meilleurs films Thriller</h2>
-                </div>
-                <div class="best-movies-category-pic">
-                    <img src="temp-image/thriller-1.jpg" alt="">
-                    <img src="temp-image/thriller-2.jpg" alt="">
-                    <img src="temp-image/thriller-3.jpg" alt="">
-                    <img src="temp-image/thriller-4.jpg" alt="">
-                    <img src="temp-image/thriller-5.jpg" alt="">
-                    <img src="temp-image/thriller-6.jpg" alt="">
-                    <img src="temp-image/thriller-7.jpg" alt="">
-                    
-                </div>
-            </div>
-
-            <div class="best-movies-drama">
-                <div class="category-title">
-                    <h2>Meilleurs films Drame</h2>
-                </div>
-                <div class="best-movies-category-pic">
-                    <img src="temp-image/drama-1.jpg" alt="">
-                    <img src="temp-image/drama-2.jpg" alt="">
-                    <img src="temp-image/drama-3.jpg" alt="">
-                    <img src="temp-image/drama-4.jpg" alt="">
-                    <img src="temp-image/drama-5.jpg" alt="">
-                    <img src="temp-image/drama-6.jpg" alt="">
-                    <img src="temp-image/drama-7.jpg" alt="">
-                    
-                </div>
+                <div id="Sci-fi" class="best-movies-category-pictures">
                 
+                </div>
             </div>
         </div>
-    
+
+        <!-- Thriller -->
+        <div class="mid-section"> 
+            <div class="best-movies-category">
+                <div id="category-title" class="category-title">
+                    <h2>Meilleurs films Thriller</h2>
+                </div>
+                <div id="Thriller" class="best-movies-category-pictures">
+                
+                </div>
+            </div>
+        </div>
+
+        <!-- Drame -->
+        <div class="mid-section"> 
+            <div class="best-movies-category">
+                <div id="category-title" class="category-title">
+                    <h2>Meilleurs films Drame</h2>
+                </div>
+                <div id="Drama" class="best-movies-category-pictures">
+                
+                </div>
+            </div>
+        </div>
+
+
+           
+        <!-- END MID SECTION -->
+
+    <!-- END SECTION-->
     </section>
     <script src="request.js"></script>
     <script src="modal.js"></script>
