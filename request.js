@@ -15,13 +15,25 @@ function getBestMovie(url) {
 
             for (element of resObj.results) {
                 console.log(element.id);
-                bestMoviePic.innerHTML += '    <img onclick="openModal('+ element.id +')" src="' + element.image_url + '" alt="" class="best-image"></img>'
+                bestMoviePic.innerHTML += '<img onclick="openModal('+ element.id +')" src="' + element.image_url + '" alt="" class="best-image"></img>\n \
+        <div id="myModal" class="modal">\n \
+            <div class="modal-content">\n \
+                <span class="close">×</span>\n \
+                <ul>\n \
+                    <li> Titre :  ' + element.title + '</li>\n \
+                    <li> Genre :  ' + element.genres + '</li>\n \
+                    <li> Année :  ' + element.year + '</li>\n \
+                    <li> Votes :  ' + element.votes + '</li>\n \
+                    <li> Score IMDB : ' + element.imdb_score + '</li>\n \
+                    <li> Réalisateur : ' + element.directors + '</li>\n \
+                    <li> Acteurs : ' + element.actors + '</li>\n \
+                    <li> Pays : ' + element.country + '</li>\n \
+            </div>\n \
+        </div>\n'
             
                 
                 console.log(bestMoviePic.innerHTML);
 
-
-        
             } 
         }   else if (this.status == 404) {
                 document.getElementById("best_movie").innerHTML = "Erreur 404";
