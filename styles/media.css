@@ -1,11 +1,8 @@
 @media screen and (max-width: 390px) {
-    
-    
 
     .left-section {
         display: none;
     }
-
 
 }
 
@@ -16,18 +13,20 @@
 }
 
 @media screen and (max-width: 890px) {
-    .best-movies-sci-fi, .best-movies-thriller, .best-movies-drama {
-        overflow-x: scroll;
-        overscroll-behavior-inline: contain;
-        height: auto;
-    }
-
+  
     .best-movies-sci-fi img, .best-movies-thriller img, .best-movies-drama img {
         max-width: 100px;
     }
 
     .best-movies-category-pic {
-        padding-bottom: 25px;
+        padding-bottom: 23px;
+        padding-top: 23px;
+        overflow-x: scroll;
+        overscroll-behavior-inline: contain;
+        height: auto;
+        z-index: 1;
     }
+
+
 
 }
