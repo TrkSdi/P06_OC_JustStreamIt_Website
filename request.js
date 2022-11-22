@@ -29,7 +29,7 @@ function getBestMovie(url) {
                     bestMovie.innerHTML += '<img onclick="openModal('+ objt.id +')" src="' + objt.image_url + '" alt="" class="best-image">\n \
                     <div id="' + String(objt.id) + '" class="modal">\n \
                         <div class="modal-content">\n \
-                            <span class="close">×</span>\n \
+                            <span id="close-btn" class="close" data-dismiss="modal">×</span>\n \
                             <ul>\n \
                                 <li> Titre :  ' + objt.original_title + '</li>\n \
                                 <li> Genre :  ' + objt.genres + '</li>\n \
@@ -40,7 +40,7 @@ function getBestMovie(url) {
                                 <li> Acteurs : ' + objt.actors + '</li>\n \
                                 <li> Durée : ' + objt.duration + 'min</li>\n \
                                 <li> Pays : ' + objt.countries + '</li>\n \
-                                <li> Box office : ' + objt.worldwide_gross_income + '</li>\n \
+                                <li> Box office $: ' + objt.worldwide_gross_income + '</li>\n \
                                 <li> Synopsis : ' + objt.description + '</li>\n \
                         </div>\n \
                     </div>\n'
@@ -76,7 +76,7 @@ function getBestMovieCategory(url, category) {
                     bestCategory.innerHTML +='<img onclick="openModal(' + objt.id + ')" src="' + objt.image_url + '">\n\
                     <div id="' + String(objt.id) + '" class="modal">\n\
                         <div class="modal-content">\n\
-                            <span class="close">×</span>\n\
+                            <span id="close-btn" class="close" data-dismiss="modal">×</span>\n\
                             <ul>\n\
                             <li> Titre :  ' + objt.original_title + '</li>\n \
                             <li> Genre :  ' + objt.genres + '</li>\n \
@@ -87,7 +87,7 @@ function getBestMovieCategory(url, category) {
                             <li> Acteurs : ' + objt.actors + '</li>\n \
                             <li> Durée : ' + objt.duration + 'min</li>\n \
                             <li> Pays : ' + objt.countries + '</li>\n \
-                            <li> Box office : ' + objt.worldwide_gross_income + '</li>\n \
+                            <li> Box office : $' + objt.worldwide_gross_income + '</li>\n \
                             <li> Synopsis : ' + objt.description + '</li>\n \
                         </div>\n\
                     </div>\n'

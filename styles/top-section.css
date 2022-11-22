@@ -1,22 +1,27 @@
 .top-section {
-    background-color: lightcyan;
+    background-color:black;
     display: flex;
     flex-direction: column;
     margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .best-movie-title {
-    background-color: lightgoldenrodyellow;
+    background-color: black;
+    margin-bottom: 10px;
 }
 
 #title.best-movie-title h1 {
     margin: 0px;
     font-weight: 700;
     font-size: 20px;
+    color: white;
+    text-align: center;
+
 }
 
 #movie-picture.best-movie-picture {
-    background-color: white;
+    background-color: black;
     display: flex;
     justify-content: center;
     max-width: 600px;

@@ -28,7 +28,7 @@ function openModal(movieId) {
     }
   }
 
-    var span = document.getElementsByClassName("close")[0];
+  var span = document.getElementById("close-btn");
 
   span.onclick = function() {
     modal.style.display = "none";

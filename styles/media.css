@@ -1,12 +1,34 @@
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 440px) {
 
     .left-section {
         display: none;
     }
+
+    header {
+        justify-content: center;
+    }
+
+    .best-movies-category h2, h1{
+        text-align: center;
+    }
+
+    .top-section {
+        margin-bottom: 20px;
+    }
+
+    .best-movies-category-pictures {
+        margin: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
 }
 
 @media screen and (max-width: 890px) {
-  
+
+    .best-movies-category {
+        z-index: 0;
+    }
+
     .best-movies-category-pictures img {
         max-width: 100px;
     }
@@ -14,12 +36,12 @@
     .best-movies-category-pictures {
         padding-bottom: 23px;
         padding-top: 23px;
+        padding-left: 23px;
+        padding-right: 23px;
         overflow-x: scroll;
-        overscroll-behavior-inline: contain;
+        
         height: auto;
         z-index: 1;
     }
-
-
 
 }
