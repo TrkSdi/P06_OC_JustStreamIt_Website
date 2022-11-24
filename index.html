@@ -10,14 +10,18 @@
     <link rel="stylesheet" href="styles/top-section.css">
     <link rel="stylesheet" href="styles/mid-section.css">
     <link rel="stylesheet" href="styles/media.css">
-    <!--<link rel="stylesheet" href="styles/modal.css">-->
-    <link rel="stylesheet" href="styles/modal1.css">
+    <link rel="stylesheet" href="styles/modal.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
 
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="image/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="image/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta http-equiv="refresh" content="60">
 
 </head>
 <body>
@@ -35,8 +39,9 @@
             </nav>
         </div>
     </header>
-    <!-- END HEADER-->
+    <!-- END HEADER -->
 
+    <!-- MODAL -->
     <div id="myModal" class="modal">
         <div id="modal-content">
             <span id="close-btn">×</span>
@@ -44,6 +49,7 @@
             </div>
         </div>
     </div>
+    <!-- END MODAL -->
 
     <section>
 
@@ -59,6 +65,17 @@
         <!-- END TOP SECTION -->
 
         <!-- MID SECTION-->
+        <!-- Toutes catégories -->
+        <div class="mid-section"> 
+            <div class="best-movies-category">
+                <div id="category-title" class="category-title">
+                    <h2>Les mieux notés</h2>
+                </div>
+                <div id="all-category" class="best-movies-category-pictures">
+                </div>
+            </div>
+        </div>
+
         <!-- Sci-Fi -->
         <div class="mid-section"> 
             <div class="best-movies-category">
@@ -99,7 +116,6 @@
     <!-- END SECTION-->
     </section>
     <script src="request.js"></script>
-    <!--<script src="modal.js"></script>-->
-    <script src="modal1.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>
