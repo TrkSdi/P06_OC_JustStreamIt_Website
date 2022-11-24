@@ -24,26 +24,30 @@ function getBestMovie(url) {
                     const objt = JSON.parse(result.responseText);
                     const bestMovie = document.getElementById("movie-picture");
 
-                    //console.log(objt.id)
+                    //console.log(objt)
 
-                    bestMovie.innerHTML += '<img onclick="openModal('+ objt.id +')" src="' + objt.image_url + '" alt="" class="best-image">\n \
-                    <div id="' + String(objt.id) + '" class="modal">\n \
-                        <div class="modal-content">\n \
-                            <span id="close-btn" class="close" data-dismiss="modal">×</span>\n \
-                            <ul>\n \
-                                <li> Titre :  ' + objt.original_title + '</li>\n \
-                                <li> Genre :  ' + objt.genres + '</li>\n \
-                                <li> Année de sortie :  ' + objt.year + '</li>\n \
-                                <li> Notes :  ' + objt.avg_vote + '</li>\n \
-                                <li> Score IMDB : ' + objt.imdb_score + '</li>\n \
-                                <li> Réalisateur : ' + objt.directors + '</li>\n \
-                                <li> Acteurs : ' + objt.actors + '</li>\n \
-                                <li> Durée : ' + objt.duration + 'min</li>\n \
-                                <li> Pays : ' + objt.countries + '</li>\n \
-                                <li> Box office $: ' + objt.worldwide_gross_income + '</li>\n \
-                                <li> Synopsis : ' + objt.description + '</li>\n \
-                        </div>\n \
+                    bestMovie.innerHTML += '\
+                    <img onclick="openModal(' + String(objt.id) + ')" src="' + objt.image_url + '">\n\
+                    <div id="' + String(objt.id) + '" class="modal">\n\
+                        <div id="modal-content">\n\
+                            <span id="close-btn">×</span>\n\
+                            <ul>\n\
+                            <li> Titre :  ' + objt.original_title + '</li>\n \
+                            <li> Genre :  ' + objt.genres + '</li>\n \
+                            <li> Année de sortie :  ' + objt.year + '</li>\n \
+                            <li> Notes :  ' + objt.avg_vote + '</li>\n \
+                            <li> Score IMDB : ' + objt.imdb_score + '</li>\n \
+                            <li> Réalisateur : ' + objt.directors + '</li>\n \
+                            <li> Acteurs : ' + objt.actors + '</li>\n \
+                            <li> Durée : ' + objt.duration + 'min</li>\n \
+                            <li> Pays : ' + objt.countries + '</li>\n \
+                            <li> Box office : $' + objt.worldwide_gross_income + '</li>\n \
+                            <li> Synopsis : ' + objt.description + '</li>\n \
+                        </div>\n\
                     </div>\n'
+                    
+                    //console.log(objt.original_title)
+                    //console.log(bestMovie.innerHTML)
                 }
                 result.open("GET", new_url, true);
                 result.send();
@@ -73,10 +77,11 @@ function getBestMovieCategory(url, category) {
                     const objt = JSON.parse(result.responseText);
                     const bestCategory = document.getElementById(category);   
 
-                    bestCategory.innerHTML +='<img onclick="openModal(' + objt.id + ')" src="' + objt.image_url + '">\n\
+                    bestCategory.innerHTML +='\
+                    <img onclick="openModal(' + String(objt.id) + ')" src="' + objt.image_url + '">\n\
                     <div id="' + String(objt.id) + '" class="modal">\n\
-                        <div class="modal-content">\n\
-                            <span id="close-btn" class="close" data-dismiss="modal">×</span>\n\
+                        <div id="modal-content">\n\
+                            <span id="close-btn">×</span>\n\
                             <ul>\n\
                             <li> Titre :  ' + objt.original_title + '</li>\n \
                             <li> Genre :  ' + objt.genres + '</li>\n \
@@ -91,12 +96,19 @@ function getBestMovieCategory(url, category) {
                             <li> Synopsis : ' + objt.description + '</li>\n \
                         </div>\n\
                     </div>\n'
+                    
+                    //console.log(objt.original_title); 
+                    //console.log(bestCategory.innerHTML);
                 }
+
+                    
+                
+
                 result.open("GET", new_url, true);
                 result.send();
                 
-            }        
-                //console.log(bestCategory.innerHTML)
+            }   
+            
 
         } else if (this.status == 404) {
             document.getElementById("best_movie").innerHTML = "Erreur 404";

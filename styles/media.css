@@ -25,9 +25,6 @@
 
 @media screen and (max-width: 890px) {
 
-    .best-movies-category {
-        z-index: 0;
-    }
 
     .best-movies-category-pictures img {
         max-width: 100px;
