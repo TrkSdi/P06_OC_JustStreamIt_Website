@@ -1,6 +1,6 @@
 function openModal(movieId) {
 
-    var modal = document.getElementById(String(movieId));  
+    var modal = document.getElementById("myModal");  
     url = "http://localhost:8000/api/v1/titles/" + String(movieId);
 
     const mod = new XMLHttpRequest();
@@ -8,13 +8,25 @@ function openModal(movieId) {
     mod.onload = function() {
         
         if (this.readyState == 4 && this.status == 200) {
-            const resObj = JSON.parse(this.responseText);
+            const objt = JSON.parse(this.responseText);
 
-            console.log(resObj)
+            console.log(objt)
 
-            var modalContent = document.getElementById("modal-content");
+            var modalContent = document.getElementById("content-movie");
             //on modifie le content
-            modalContent.innerHTML = resObj;
+            modalContent.innerHTML = '<ul>\n\
+            <li> Titre :  ' + objt.original_title + '</li>\n\
+            <li> Genre :  ' + objt.genres + '</li>\n\
+            <li> Année de sortie :  ' + objt.year + '</li>\n\
+            <li> Notes :  ' + objt.avg_vote + '</li>\n\
+            <li> Score IMDB : ' + objt.imdb_score + '</li>\n\
+            <li> Réalisateur : ' + objt.directors + '</li>\n\
+            <li> Acteurs : ' + objt.actors + '</li>\n\
+            <li> Durée : ' + objt.duration + 'min</li>\n\
+            <li> Pays : ' + objt.countries + '</li>\n\
+            <li> Box office : $' + objt.worldwide_gross_income + '</li>\n\
+            <li> Synopsis : ' + objt.description + '</li>\n\
+                </ul>';
             //on display le modal 
             modal.style.display = "block";
 
