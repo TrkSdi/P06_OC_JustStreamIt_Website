@@ -33,7 +33,6 @@
     
   }
 
-
   #close-btn {
     color: #aaa;
     float: right;
@@ -48,7 +47,6 @@
 
   #content-movie {
     display: flex;
-    flex-direction: reverse;
     align-content: flex-start;
     justify-content: flex-start;
     }
